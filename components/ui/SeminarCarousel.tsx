@@ -39,7 +39,7 @@ export function SeminarCarousel({ seminars, onSeminarClick }: PropType) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true, 
     align: 'center',
-    containScroll: 'trimSnaps'
+    // containScroll: 'trimSnaps'
   }, [autoplayPlugin.current]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -74,12 +74,12 @@ export function SeminarCarousel({ seminars, onSeminarClick }: PropType) {
         <div className="flex -ml-4 h-[450px]">
           {seminars.map((seminar, index) => (
             <div 
-              className={`relative flex-shrink-0 flex-grow-0 basis-[85%] sm:basis-[60%] md:basis-[45%] lg:basis-[35%] pl-4 embla__slide ${
-                index === selectedIndex ? 'is-selected' : ''
-              }`}
+              className={`relative flex-shrink-0 flex-grow-0 basis-[85%] sm:basis-[60%] md:basis-[45%] lg:basis-[35%] pl-4`}
               key={`${seminar.id}-${index}`}
             >
-              <div className="p-1 h-full">
+              <div 
+                className={`p-1 h-full embla__slide ${index === selectedIndex ? 'is-selected' : ''}`}
+              >
                 <SeminarCard seminar={seminar} onScheduleClick={() => onSeminarClick(seminar)} />
               </div>
             </div>
