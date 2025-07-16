@@ -58,7 +58,7 @@ const SeminarsPage: NextPage<SeminarsPageProps> = ({ seminars, industries }) => 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-100">
         <header className="bg-white/80 shadow-sm sticky top-0 z-40 backdrop-blur-md">
           <nav className="container mx-auto px-6 py-4">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-800">Seminar CMS</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-800">HR team</h1>
           </nav>
         </header>
 
